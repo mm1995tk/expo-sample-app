@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Text } from "react-native";
+import { Pressable, PressableProps, StyleSheet, Text } from "react-native";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { ComponentProps } from "react";
 
@@ -9,7 +9,7 @@ export default function IconButton({
 }: {
   icon: ComponentProps<typeof MaterialIcons>["name"];
   label: string;
-  onPress: () => Promise<void>;
+  onPress: PressableProps["onPress"];
 }) {
   return (
     <Pressable style={styles.iconButton} onPress={onPress}>

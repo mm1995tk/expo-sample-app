@@ -1,4 +1,11 @@
-import { Modal, View, Text, Pressable, StyleSheet } from "react-native";
+import {
+  Modal,
+  View,
+  Text,
+  Pressable,
+  StyleSheet,
+  PressableProps,
+} from "react-native";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { ReactNode } from "react";
 
@@ -9,7 +16,7 @@ export default function EmojiPicker({
 }: {
   isVisible: boolean;
   children?: ReactNode;
-  onClose: () => Promise<void>;
+  onClose: PressableProps["onPress"];
 }) {
   return (
     <Modal animationType="slide" transparent={true} visible={isVisible}>
